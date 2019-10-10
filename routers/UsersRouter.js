@@ -4,7 +4,7 @@ const db = require("../config/database");
 const bcrypt = require("bcrypt-nodejs");
 const User = require("../models/UserModel");
 const Login = require("../models/LoginModel");
-const UsersMockData = require("./usersMockData");
+// const UsersMockData = require("./usersmockdata.js");
 
 // Get root list of all users from the users database table
 router.get("/", (req, res) => {
@@ -121,7 +121,7 @@ router.post("/profile/addNew", (req, res) => {
 
 //------------------
 /*  This automatically adds a JSON formated list of users to the users table and creates an automatic username and password for each user based on their firstnames. I will use any frontend app or use POSTMAN to send a triggering POST operatio to this endpoint and it will start loading the usersMokeData.js and iterates through the list and then add them to the database. */
-router.post("/addNew/bulk", (req, res) => {
+/* router.post("/addNew/bulk", (req, res) => {
 
     // Validate to see if there is data to be loaded from the 'UsersMockData.js' file.
     if (UsersMockData.length < 1) {
@@ -217,7 +217,7 @@ router.post("/addNew/bulk", (req, res) => {
 
     performInsert();
 
-});
+}); */
 
 // Reset users table index to a specified default in case the table is empty
 router.post("/resetindex", (req, res) => {

@@ -3,7 +3,7 @@ const db = require("../config/database");
 const Movie = require("../models/MovieModel");
 const View_Movie = require("../models/MovieViewModel.js");
 const Movie_Rating = require("../models/MovieRatingModel");
-const MoviesMockData = require("../routers/moviesmockdata.js");
+// const MoviesMockData = require("./moviesmockdata.js");
 
 router.get("/", (req, res) => {
     Movie.findAll()
@@ -75,7 +75,7 @@ router.post("/addNew", (req, res) => {
 
 // Insert tableIDS new bulk movie data from tableIDS JSON object formated file into movies 
 // table using its sequelize model. The JSON file object name is MoviesMockData
-router.post("/addNew/bulk", (req, res) => {
+/* router.post("/addNew/bulk", (req, res) => {
 
     const { reqSource } = req.body;
 
@@ -138,7 +138,7 @@ router.post("/addNew/bulk", (req, res) => {
 
     dd();
 
-});
+});*/
 
 // Reset movies table index to tableIDS specified default in case the table is empty
 router.post("/resetindex", (req, res) => {
