@@ -1,4 +1,4 @@
-module.exports = [
+export const UsersMockData = [
     { lastname: "ABIODUN", firstname: "Igodan", email: "igodan@gmail.com", sex: "Male", age: 45, role: "USER" },
     { lastname: "ABU", firstname: "Saliu", email: "saliu@gmail.com", sex: "Female", age: 34, role: "USER" },
     { lastname: "ABUMERE", firstname: "Andrew", email: "andrew@gmail.com", sex: "Female", age: 43, role: "USER" },
