@@ -4,7 +4,7 @@ const db = require("../config/database");
 const bcrypt = require("bcrypt-nodejs");
 const User = require("../models/UserModel");
 const Login = require("../models/LoginModel");
-const UsersMockData = require("./usersmockdata");
+const UsersMockData = require("./usersMockData");
 
 // Get root list of all users from the users database table
 router.get("/", (req, res) => {

@@ -3,7 +3,7 @@ const db = require("../config/database");
 const Movie = require("../models/MovieModel");
 const View_Movie = require("../models/MovieViewModel.js");
 const Movie_Rating = require("../models/MovieRatingModel");
-const MoviesMockData = require("./moviesmockdata");
+const MoviesMockData = require("./moviesMockData");
 
 router.get("/", (req, res) => {
     Movie.findAll()
