@@ -3,7 +3,7 @@ const sequelize = require("sequelize");
 // --- Create database connection for sequelize ---
 //-------------------------------------------------
 // Option 1: Passing parameters separately
-module.exports = new sequelize("MovieManagement", "postgres", null, {
+module.exports = new sequelize("postgresql-curved-90429", "postgres", null, {
     host: process.env.DATABASE_URL,
     ssl: true,
     dialect: "postgres",
