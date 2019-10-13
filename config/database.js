@@ -4,16 +4,17 @@ const sequelize = require("sequelize");
 //-------------------------------------------------
 // Option 1: Passing parameters separately
 module.exports = new sequelize("MovieManagement", "postgres", null, {
-  host: "localhost",
-  dialect: "postgres",
-  // Optional part. Dont forget adding comma to the end
-  // of line above when you uncommet this bottom part
-  pool: {
-    max: 5,
-    min: 0,
-    acquire: 30000,
-    idle: 10000
-  }
+    host: process.env.DATABASE_URL,
+    ssl: true,
+    dialect: "postgres"
+    // Optional part. Dont forget adding comma to the end
+    // of line above when you uncommet this bottom part
+    /*  pool: {
+       max: 5,
+       min: 0,
+       acquire: 30000,
+       idle: 10000
+     } */
 });
 
 // Option 2: Using a connection URI
