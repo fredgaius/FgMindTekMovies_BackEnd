@@ -6,15 +6,15 @@ const sequelize = require("sequelize");
 module.exports = new sequelize("MovieManagement", "postgres", null, {
     host: process.env.DATABASE_URL,
     ssl: true,
-    dialect: "postgres"
+    dialect: "postgres",
     // Optional part. Dont forget adding comma to the end
     // of line above when you uncommet this bottom part
-    /*  pool: {
-       max: 5,
-       min: 0,
-       acquire: 30000,
-       idle: 10000
-     } */
+    pool: {
+        max: 5,
+        min: 0,
+        acquire: 30000,
+        idle: 10000
+    }
 });
 
 // Option 2: Using a connection URI
